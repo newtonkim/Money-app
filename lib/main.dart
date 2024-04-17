@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'login.dart';
+import 'signup.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -30,7 +31,6 @@ class HomePage extends StatelessWidget {
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 30,
-
 
                   ),
                 ),
@@ -79,9 +79,29 @@ class HomePage extends StatelessWidget {
                       fontSize: 18
                     ),
                   ),
-                )
+                ),
                 // create the signup button
+              SizedBox(height:20),
+              MaterialButton(
+                minWidth: double.infinity,
+                height: 60,
+                onPressed:(){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>SignUpPage()));
 
+                },
+                color: Color(0xff0095FF),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(50)
+                ),
+                child: Text(
+                  "Sign up",
+                  style: TextStyle(
+                    color:Colors.white,
+                    fontWeight: FontWeight.w600,
+                    fontSize: 18
+                  )
+                )
+              )
                 
 
               ],
