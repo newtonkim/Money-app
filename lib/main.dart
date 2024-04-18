@@ -3,7 +3,7 @@ import 'login.dart';
 import 'signup.dart';
 
 void main() {
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     debugShowCheckedModeBanner: false,
     home: HomePage(),
   ));
@@ -11,6 +11,8 @@ void main() {
 
 
 class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
   @override
  
   Widget build(BuildContext context) {
@@ -18,13 +20,13 @@ class HomePage extends StatelessWidget {
       body: SafeArea(child: Container(
         width: double.infinity,
         height: MediaQuery.of(context).size.height,
-        padding: EdgeInsets.symmetric(horizontal: 30, vertical: 50),
+        padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 50),
         child: Column(
           // even space distribution
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Column (
+            const Column (
               children: <Widget>[
                 Text (
                   'Venom App',
@@ -48,7 +50,7 @@ class HomePage extends StatelessWidget {
             ),
             Container(
               height: MediaQuery.of(context).size.height / 3,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage("assets/welcome.png")
                 )
@@ -62,17 +64,17 @@ class HomePage extends StatelessWidget {
                   minWidth: double.infinity,
                   height: 60,
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) =>  LoginPage()));
                   },
 
                   // define the shape
                   shape: RoundedRectangleBorder(
-                    side: BorderSide(
+                    side: const BorderSide(
                       color: Colors.black
                     ),
                     borderRadius: BorderRadius.circular(50)
                   ),
-                  child: Text(
+                  child: const Text(
                     'Login',
                     style: TextStyle(
                       fontWeight: FontWeight.w600,
@@ -81,19 +83,19 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 // create the signup button
-              SizedBox(height:20),
+              const SizedBox(height:20),
               MaterialButton(
                 minWidth: double.infinity,
                 height: 60,
                 onPressed:(){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>SignUpPage()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> SignUpPage()));
 
                 },
-                color: Color(0xff0095FF),
+                color: const Color(0xff0095FF),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(50)
                 ),
-                child: Text(
+                child: const Text(
                   "Sign up",
                   style: TextStyle(
                     color:Colors.white,
