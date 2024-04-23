@@ -102,7 +102,14 @@ class SignUpPage extends StatelessWidget {
 
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[],
+                children: <Widget>[
+                   Text("Already have an account ?"),
+                   Text("Login", style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w600,
+
+                   ),)
+                ],
               )
             ],
           ),
